@@ -1,4 +1,5 @@
 //Business Logic
+
 function Player(id) {
   this.turnScore = 0;
   this.totalScore = 0;
@@ -24,6 +25,7 @@ Player.prototype.roll = function() {
 }
 
 //UI Logic
+
 let player1 = new Player(1);
 let player2 = new Player(2);
 $(document).ready(function() {

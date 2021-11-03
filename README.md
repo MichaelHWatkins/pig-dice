@@ -14,7 +14,7 @@
 * _GitHub repositories_
 
 ## Description
-_This webpage lets two players play Pig Dice._
+_This webpage lets two players play Pig Dice, a game where players take turns rolling a die. A player can choose to roll or hold. If a 1 is rolled, they score nothing and it becomes the next player's turn. If any other number is rolled, it is added to their turn total and the player's turn continues. If a player chooses to "hold", their turn total is added to their total score, and their turn ends._
 
 ## Specs
 #### _Takes a dice roll from the user and based on the value, it will increase or decrease the total score_

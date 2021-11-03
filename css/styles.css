@@ -1,5 +1,25 @@
 .jumbotron {
   text-align: center;
+  text-shadow: 4px 4px 4px black;
+  font-family:monospace;
+  background-image:url(/img/pic3761859.png);
+  border: 5px solid black;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  color: crimson;
+  font-weight: bolder;
+}
+
+h2 {
+  font-family: monospace;
+  font-weight: bold;
+}
+
+h3 {
+  font-family: monospace;
 }
 
 .btn-roll2 {
@@ -8,4 +28,13 @@
 
 img {
   display:none;
+  border: 2px solid black;
+}
+
+body {
+  background-color:crimson;
+}
+
+button:hover {
+background-color: crimson;
 }
