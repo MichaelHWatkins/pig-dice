@@ -1,6 +1,6 @@
 # _Pig Dice_
 
-#### By: _**Mike Watkins**__**Albert Lee**__**Nick Benzinger**_
+#### By: _**Mike Watkins**_ _**Albert Lee**_ _**Nick Benzinger**_
 
 #### _A dice game._
 
@@ -17,21 +17,21 @@
 _This webpage lets two players play Pig Dice._
 
 ## Specs
-#### _Takes a dice roll from the user and based on the value, it will increase or decrease the total score
+#### _Takes a dice roll from the user and based on the value, it will increase or decrease the total score_
 
-Player 1 and Player 2 input their names.
+*Player 1 and Player 2 input their names.
 
-Player 1 clicks Roll button. Dice is rolled and number is given. 
+*Player 1 clicks Roll button. Dice is rolled and number is given. 
 
-If Player 1 rolls a number greater than 1, the value is added to the round total.
+*If Player 1 rolls a number greater than 1, the value is added to the round total.
  
-If the number 1 is rolled, no score is added and turn will end.
+*If the number 1 is rolled, no score is added and turn will end.
 
-Player 1 has the option to hold, add total, and end turn. 
+*Player 1 has the option to hold, add total, and end turn. 
 
-Repeat for Player 2. Player 2 will roll and value will be added.
+*Repeat for Player 2. Player 2 will roll and value will be added.
 
-When a player's total score reaches 100 or more, player wins and game ends. 
+*When a player's total score reaches 100 or more, player wins and game ends. 
 
 ## Tests
 
@@ -86,4 +86,4 @@ _Mike Watkins, michaelhugheswatkins@gmail.com_
 
 _MIT License: https://opensource.org/licenses/MIT_
 
-Copyright (c) _2021_ _Mike Watkins__Albert Lee__Nick Benzinger_
+Copyright (c) _2021_ _Mike Watkins_ _Albert Lee_ _Nick Benzinger_
