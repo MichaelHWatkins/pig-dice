@@ -35,25 +35,25 @@ _This webpage lets two players play Pig Dice, a game where players take turns ro
 
 ## Tests
 
-Describe: dice()
+**Describe: dice()**
 
 Test: It should return an object with properties of dice face.
 Code: dice1 = new Dice();
 expected output:
 
-Describe: diceRoll()
+**Describe: diceRoll()**
 
 Test: It should return a number to be added to the score.
 Code: dice1.diceRoll()
 expected output: score between 1 and 6.
 
-Describe: scoreBoard()
+**Describe: scoreBoard()**
 
 Test: It should return an object with properties of total score and score for the players turn.
 Code: scoreBoard1 = new scoreBoard();
 expected output: totalScore = 0, turnScore = 0, totalScore2 = 0
 
-Describe: addScore(value)
+**Describe: addScore(value)**
 
 Test: It should add a players round score to the scoreboard
 Code: scoreBoard1.addScore(2);

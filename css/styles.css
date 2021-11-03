@@ -38,3 +38,20 @@ body {
 button:hover {
 background-color: crimson;
 }
+
+.btn-single {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+.btn-double {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+.col-6 {
+  display: none;
+  float: left;
+}

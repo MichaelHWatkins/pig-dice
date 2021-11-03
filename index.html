@@ -10,24 +10,28 @@
 <body>
   <div class ="container">
     <div class ="jumbotron"><h1>Pig Dice</h1></div>
-    <div class ="row">
-      <div class ="col-6">
-        <h2>Player 1</h2>
-        <button type="click" class="btn-roll1">Roll</button>
-        <button type="click" class="btn-hold1">Hold</button>
-        <h3>Roll: <span id="player1Roll"></span></h3>
-        <h3>Total Score: <span id="player1TotalScore"></span></h3>
-        <h3>Current Score: <span id="player1CurrentScore"></span></h3>
-        <img id ="winner1" src="/img/images.jpeg" alt="Winner">
-      </div>
-      <div class ="col-6">
-        <h2>Player 2</h2>
-        <button type="click" class="btn-roll2">Roll</button>
-        <button type="click" class="btn-hold2">Hold</button>
-        <h3>Roll: <span id="player2Roll"></span></h3>
-        <h3>Total Score: <span id="player2TotalScore"></span></h3>
-        <h3>Current Score: <span id="player2CurrentScore"></span></h3>
-        <img id ="winner2"  src="/img/images.jpeg" alt="Winner">
+      <button type="click" class="btn-single">Play Single Dice</button>
+      <button type="click" class="btn-double">Play Double Dice</button>
+      <div class="oneDie">
+        <div class="col-6">  
+        
+          <h2>Player 1</h2>
+          <button type="click" class="btn-roll1">Roll</button>
+          <button type="click" class="btn-hold1">Hold</button>
+          <h3>Roll: <span id="player1Roll"></span></h3>
+          <h3>Total Score: <span id="player1TotalScore"></span></h3>
+          <h3>Current Score: <span id="player1CurrentScore"></span></h3>
+          <img id ="winner1" src="/img/images.jpeg" alt="Winner">
+        </div>
+      <div class="col-6">
+          
+            <h2>Player 2</h2>
+            <button type="click" class="btn-roll2">Roll</button>
+            <button type="click" class="btn-hold2">Hold</button>
+            <h3>Roll: <span id="player2Roll"></span></h3>
+            <h3>Total Score: <span id="player2TotalScore"></span></h3>
+            <h3>Current Score: <span id="player2CurrentScore"></span></h3>
+            <img id ="winner2"  src="/img/images.jpeg" alt="Winner">    
       </div>
     </div>
   </div>
