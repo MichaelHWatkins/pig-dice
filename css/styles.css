@@ -26,6 +26,10 @@ h3 {
   display: none;
 }
 
+.btn-roll22 {
+  display: none;
+}
+
 img {
   display:none;
   border: 2px solid black;
@@ -51,7 +55,12 @@ background-color: crimson;
   justify-content: center;
 }
 
-.col-6 {
+.oneDie {
   display: none;
-  float: left;
+  /* float: left; */
+}
+
+.twoDie {
+  display: none;
+  /* float: left; */
 }

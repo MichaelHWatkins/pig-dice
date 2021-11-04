@@ -31,13 +31,13 @@ Player.prototype.roll2 = function() {
   if (currentRoll1 + currentRoll2 === 2){
     this.totalScore = 0;
   }
-  else if (currentRoll1 + currentRoll2 <= 7) {
+  else if (currentRoll1 === 1 || currentRoll2 === 1) {
     this.turnScore = 0
   }
   else{
     this.turnScore += fullRoll;
   }
-  return [fullRoll, this.turnScore];
+  return [[currentRoll1, currentRoll2], this.turnScore];
 }
 //UI Logic
 
@@ -45,7 +45,8 @@ let player1 = new Player(1);
 let player2 = new Player(2);
 $(document).ready(function() {
   $(".btn-single").click(function(event){
-    $(".col-6").show();
+    $(".oneDie").show();
+    $(".twoDie").hide();
   })
   $(".btn-roll1").click(function(event) {
     let rollValue= player1.roll()
@@ -84,50 +85,51 @@ $(document).ready(function() {
   });
 
   $(".btn-double").click(function(event){
-    $(".col-6").show();
+    $(".twoDie").show();
+    $(".oneDie").hide();
   })
-  $(".btn-roll1").click(function(event) {
+  $(".btn-roll12").click(function(event) {
     let rollValue= player1.roll2()
-    $("#player1CurrentScore").text(rollValue[1])
-    $("#player1Roll").text(rollValue[0])
-    $(".btn-hold1").show()
-    if(rollValue[0] === 4 || rollValue[0] === 6 || rollValue[0] === 8 || rollValue[0] === 10 || rollValue[0] === 12){
-      $(".btn-hold1").hide()
+    $("#player1CurrentScore2").text(rollValue[1])
+    $("#player1Roll2").text(rollValue[0])
+    $(".btn-hold12").show()
+    if((rollValue[0][0] === 2 && rollValue[0][1] === 2) || (rollValue[0][0] === 3 && rollValue[0][1] === 3) || (rollValue[0][0] === 4 && rollValue[0][1] === 4)  || (rollValue[0][0] === 5 && rollValue[0][1] === 5) || (rollValue[0][0] === 6 && rollValue[0][1] === 6)){
+      $(".btn-hold12").hide()
     }
-    if(rollValue[0] === 1){
-      $(".btn-roll2").show();
-      $(".btn-roll1").hide();
+    if(rollValue[0].includes(1) ){
+      $(".btn-roll22").show();
+      $(".btn-roll12").hide();
     }
   });
-  $(".btn-hold1").click(function(event) {
-    $("#player1TotalScore").text(player1.hold())
-    $(".btn-roll2").show();
-    $(".btn-roll1").hide();
+  $(".btn-hold12").click(function(event) {
+    $("#player1TotalScore2").text(player1.hold())
+    $(".btn-roll22").show();
+    $(".btn-roll12").hide();
     if (player1.totalScore >= 100) {
-      $("#winner1").show();
+      $("#winner12").show();
     }
 
   });
-  $(".btn-roll2").click(function(event) {
+  $(".btn-roll22").click(function(event) {
     let rollValue= player2.roll2()
-    $("#player2CurrentScore").text(rollValue[1])
-    $("#player2Roll").text(rollValue[0])
-    $(".btn-hold2").show()
+    $("#player2CurrentScore2").text(rollValue[1])
+    $("#player2Roll2").text(rollValue[0])
+    $(".btn-hold22").show()
 
-    if(rollValue[0] === 4 || rollValue[0] === 6 || rollValue[0] === 8 || rollValue[0] === 10 || rollValue[0] === 12){
-      $(".btn-hold2").hide()
+    if((rollValue[0][0] === 2 && rollValue[0][1] === 2) || (rollValue[0][0] === 3 && rollValue[0][1] === 3) || (rollValue[0][0] === 4 && rollValue[0][1] === 4)  || (rollValue[0][0] === 5 && rollValue[0][1] === 5) || (rollValue[0][0] === 6 && rollValue[0][1] === 6)){
+      $(".btn-hold22").hide()
     }
-    if(rollValue[0] === 1){
-      $(".btn-roll1").show();
-      $(".btn-roll2").hide();
+    if(rollValue[0].includes(1)){
+      $(".btn-roll12").show();
+      $(".btn-roll22").hide();
     }
   });
-  $(".btn-hold2").click(function(event) {
-    $("#player2TotalScore").text(player2.hold())
-    $(".btn-roll1").show();
-    $(".btn-roll2").hide();
+  $(".btn-hold22").click(function(event) {
+    $("#player2TotalScore2").text(player2.hold())
+    $(".btn-roll12").show();
+    $(".btn-roll22").hide();
     if (player2.totalScore >= 100) {
-      $("#winner2").show();
+      $("#winner22").show();
     }
   });
 });
